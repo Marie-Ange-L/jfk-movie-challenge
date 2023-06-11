@@ -2,15 +2,131 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
 
-h1,
+body {
+	background-color: #19151f;
+}
+h1 {
+	font-family: Roboto Slab;
+	font-size: 135px;
+	text-shadow: 0px 0px 15px rgba(68, 68, 68, 0.75);
+	color: #f8fbf9;
+}
+
+h1 span {
+	border-top: #f8fbf9 solid 4px;
+	border-bottom: #f8fbf9 solid 4px;
+}
+
 h2 {
 	font-family: Bungee;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #fef8ec;
+}
+
+h2 span {
+	color: #19151f;
+}
+
+h3 {
+	text-align: center;
+	font-family: Roboto Slab;
+	font-weight: 600;
 }
 
 .subtitle {
 	font-family: Lobster;
+	font-size: 32px;
+	letter-spacing: 2px;
+	color: #f8fbf9;
+	text-shadow: 0px 0px 15px rgba(68, 68, 68, 0.75);
+	padding-top: 40px;
 }
 
 p {
 	font-family: Roboto Slab;
+	color: #f8fbf9;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.hero {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 200px;
+}
+
+.hero-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0.8;
+	filter: blur(1px);
+	filter: contrast(1.55);
+	filter: brightness(75%);
+}
+
+.hero-content {
+	position: relative;
+}
+
+.intro {
+	text-align: center;
+	margin: 0 190px;
+}
+
+.beige-bg {
+	background-color: #fef8ec;
+	border-radius: 4px;
+	padding: 25px;
+}
+
+.beige-bg p {
+	color: #19151f;
+}
+
+.beige-bg ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 15px;
+}
+
+.beige-bg strong {
+	font-weight: 500;
+}
+
+.beige-bg li {
+	padding-bottom: 15px;
+}
+
+section {
+	margin: 25px 0;
+	padding: 25px 50px;
+}
+section img {
+	border-radius: 1px;
+}
+
+hr {
+	background: #c34224;
+	height: 4px;
+	opacity: 1;
+	border: none;
+	margin: 65px 400px 0 400px;
+}
+
+.blue-bg {
+	background-color: #669bbc;
+}
+
+@media (max-width: 768px) {
+	.intro {
+		margin: 0;
+	}
 }
