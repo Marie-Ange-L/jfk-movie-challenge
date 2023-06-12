@@ -5,6 +5,7 @@
 body {
 	background-color: #19151f;
 }
+
 h1 {
 	font-family: Roboto Slab;
 	font-size: 135px;
@@ -31,6 +32,8 @@ h3 {
 	text-align: center;
 	font-family: Roboto Slab;
 	font-weight: 600;
+	padding-bottom: 15px;
+	line-height: 36px;
 }
 
 .subtitle {
@@ -47,16 +50,16 @@ p {
 	color: #f8fbf9;
 	font-size: 16px;
 	font-weight: 300;
-	line-height: 1.5;
-	padding-bottom: 25px;
+	line-height: 1.7;
+	padding-bottom: 15px;
 }
 
 .hero {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	padding-top: 150px;
-	padding-bottom: 200px;
+	padding-top: 20%;
+	padding-bottom: 20%;
 }
 
 .hero-bg {
@@ -97,7 +100,7 @@ p {
 .beige-bg {
 	background-color: #fef8ec;
 	border-radius: 4px;
-	padding: 25px;
+	padding: 25px 35px;
 }
 
 .beige-bg p {
@@ -119,6 +122,16 @@ p {
 	padding-bottom: 15px;
 }
 
+.beige-bg li a {
+	color: #19151f;
+	font-size: 14px;
+	text-underline-offset: 2px;
+}
+
+.beige-bg li a:hover {
+	text-decoration: none;
+}
+
 .beige-bg img {
 	padding: 15px 0 25px 0;
 	width: 65%;
@@ -128,16 +141,101 @@ p {
 .btn {
 	background-color: #c34224;
 	border: none;
+	margin-bottom: 15px;
+}
+
+.btn:hover {
+	background-color: #c34224;
+	border: #c34224 1px solid;
+	letter-spacing: 0.02rem;
 }
 
 section {
-	margin: 0 0 25px 50px;
+	margin: 0 50px 25px 50px;
 	padding: 25px 50px;
 }
+
 section img {
 	border-radius: 1px;
 }
 
 .blue-bg {
 	background-color: #669bbc;
+	margin: 0 0 25px 0;
+	padding: 25px 100px 0 100px;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 1200px) {
+	.hide {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 100px;
+	}
+
+	.subtitle {
+		font-size: 22px;
+	}
+	.hero {
+		padding-top: 20%;
+		padding-bottom: 10%;
+	}
+}
+
+@media (max-width: 475px) {
+	h1 {
+		font-size: 80px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		line-height: 30px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.subtitle {
+		font-size: 18px;
+	}
+
+	.hero {
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		padding-top: 15%;
+		padding-bottom: 5%;
+	}
+
+	section {
+		margin: 0 15px 25px 15px;
+		padding: 28px;
+	}
+
+	.blue-bg {
+		background-color: #669bbc;
+		margin: 0 0 25px 0;
+		padding: 0 50px;
+	}
 }
