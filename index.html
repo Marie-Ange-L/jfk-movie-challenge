@@ -21,9 +21,280 @@
 			integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="/style.css" />
-
 		<title>🎬 JFK by Oliver Stone - SheCodes Epic Movie Challenge</title>
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Bungee:regular);
+			@import url(https://fonts.googleapis.com/css?family=Lobster:regular);
+			@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
+
+			body {
+				background-color: #19151f;
+			}
+
+			h1 {
+				font-family: Roboto Slab;
+				font-size: 135px;
+				text-shadow: 0px 0px 15px rgba(68, 68, 68, 0.75);
+				color: #f8fbf9;
+			}
+
+			h1 span {
+				border-top: #f8fbf9 solid 4px;
+				border-bottom: #f8fbf9 solid 4px;
+			}
+
+			h2 {
+				font-family: Bungee;
+				padding: 35px 0;
+				color: #fef8ec;
+			}
+
+			h2 span {
+				color: #19151f;
+			}
+
+			h3 {
+				text-align: center;
+				font-family: Roboto Slab;
+				font-weight: 600;
+				padding-bottom: 15px;
+				line-height: 36px;
+			}
+
+			.subtitle {
+				font-family: Lobster;
+				font-size: 32px;
+				letter-spacing: 2px;
+				color: #f8fbf9;
+				text-shadow: 0px 0px 15px rgba(68, 68, 68, 0.75);
+				padding-top: 40px;
+			}
+
+			p {
+				font-family: Roboto Slab;
+				color: #f8fbf9;
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 1.7;
+				padding-bottom: 15px;
+			}
+
+			.hero {
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+				padding-top: 20%;
+				padding-bottom: 20%;
+			}
+
+			.hero-bg {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: auto;
+				opacity: 0.8;
+				filter: blur(1px);
+				filter: contrast(1.55);
+				filter: brightness(75%);
+			}
+
+			.hero-content {
+				position: relative;
+			}
+
+			.intro {
+				text-align: center;
+				max-width: 700px;
+				margin: 0 auto;
+			}
+			.hr-container {
+				display: flex;
+				justify-content: center;
+			}
+
+			.hr-container hr {
+				background: #c34224;
+				height: 4px;
+				opacity: 1;
+				border: none;
+				margin: 65px 0 35px 0;
+				width: 50%;
+			}
+
+			.beige-bg {
+				background-color: #fef8ec;
+				border-radius: 4px;
+				padding: 25px 35px;
+			}
+
+			.beige-bg p {
+				color: #19151f;
+			}
+
+			.beige-bg ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				font-size: 15px;
+			}
+
+			.beige-bg strong {
+				font-weight: 500;
+			}
+
+			.beige-bg li {
+				padding-bottom: 15px;
+			}
+
+			.beige-bg li a {
+				color: #19151f;
+				font-size: 14px;
+				text-underline-offset: 2px;
+			}
+
+			.beige-bg li a:hover {
+				text-decoration: none;
+			}
+
+			.beige-bg img {
+				padding: 15px 0 25px 0;
+				width: 65%;
+				filter: drop-shadow(1px 1px 2px rgba(68, 68, 68, 0.25));
+			}
+
+			.btn {
+				background-color: #c34224;
+				border: none;
+				margin-bottom: 15px;
+			}
+
+			.btn:hover {
+				background-color: #c34224;
+				border: #c34224 1px solid;
+				letter-spacing: 0.02rem;
+			}
+
+			section {
+				margin: 0 50px 25px 50px;
+				padding: 25px 50px;
+			}
+
+			section img {
+				border-radius: 1px;
+			}
+
+			.blue-bg {
+				background-color: #669bbc;
+				margin: 0 0 25px 0;
+				padding: 25px 100px 0 100px;
+			}
+
+			.video-wrapper {
+				position: relative;
+				padding-bottom: 56.25%;
+				height: 0;
+			}
+
+			.video-wrapper iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			legend {
+				font-style: italic;
+				font-weight: 300;
+				font-family: Roboto Slab;
+				font-size: 14px;
+				color: #f8fbf9;
+				max-width: 600px;
+				padding-top: 15px;
+			}
+
+			footer {
+				color: #f8fbf9;
+				text-align: center;
+				padding-bottom: 25px;
+			}
+
+			footer p {
+				font-family: Roboto Slab;
+				font-size: 12px;
+			}
+
+			footer a {
+				color: #f8fbf9;
+				text-underline-offset: 2px;
+			}
+
+			footer a:hover {
+				text-decoration: none;
+			}
+
+			@media (max-width: 1200px) {
+				.hide {
+					display: none;
+				}
+			}
+
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 100px;
+				}
+
+				.subtitle {
+					font-size: 22px;
+				}
+				.hero {
+					padding-top: 20%;
+					padding-bottom: 10%;
+				}
+			}
+
+			@media (max-width: 475px) {
+				h1 {
+					font-size: 80px;
+				}
+
+				h2 {
+					font-size: 26px;
+				}
+
+				h3 {
+					line-height: 30px;
+				}
+
+				p {
+					font-size: 14px;
+				}
+
+				.subtitle {
+					font-size: 18px;
+				}
+
+				.hero {
+					overflow: hidden;
+					position: relative;
+					text-align: center;
+					padding-top: 15%;
+					padding-bottom: 5%;
+				}
+
+				section {
+					margin: 0 15px 25px 15px;
+					padding: 28px;
+				}
+
+				.blue-bg {
+					background-color: #669bbc;
+					margin: 0 0 25px 0;
+					padding: 0 50px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="hero">
@@ -193,6 +464,12 @@
 							allowfullscreen
 						></iframe>
 					</div>
+					<div class="intro">
+						<legend>
+							Jim Garrison (Kevin Costner) gives an emotional closing argument
+							to the jury about the importance of truth within the government.
+						</legend>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -347,4 +624,16 @@
 			</section>
 		</div>
 	</body>
+	<footer>
+		<p>
+			This page was coded by
+			<a
+				href="https://www.shecodes.io/graduates/10518-marie-ange-lhernould"
+				title="My profile on SheCodes' website"
+				target="_blank"
+				>Marie-Ange L.</a
+			>
+			as part of a Challenge organised by SheCodes in June 2023.
+		</p>
+	</footer>
 </html>
