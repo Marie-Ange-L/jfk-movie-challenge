@@ -272,6 +272,57 @@
 				text-decoration: none;
 			}
 
+			.show-more {
+				text-align: center;
+				padding: 10px 0 40px 0;
+			}
+
+			.textContainer {
+				position: relative;
+				height: 180px;
+				overflow: hidden;
+			}
+
+			.textContainer.expanded {
+				max-height: none;
+			}
+
+			.showMoreLink {
+				display: none;
+				color: #19151f;
+				font-size: 14px;
+				opacity: 30%;
+			}
+
+			.overlay {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100px; /* Set the desired height for the overlay */
+				background-image: linear-gradient(
+					to bottom,
+					rgba(255, 255, 255, 0),
+					rgba(254, 248, 236, 0.7)
+				); /* Adjust the gradient colors as needed */
+				pointer-events: none;
+				z-index: 1;
+			}
+
+			.overlay::after {
+				content: "";
+				position: absolute;
+				bottom: -100px; /* Equal to the height of the overlay */
+				left: 0;
+				width: 100%;
+				height: 100px; /* Set the desired height for the overlay */
+				background: white; /* Match the background color of the container */
+			}
+
+			.textContainer.expanded .overlay {
+				display: none;
+			}
+
 			@media (max-width: 1200px) {
 				.hide {
 					display: none;
@@ -310,6 +361,11 @@
 					font-size: 14px;
 					padding-bottom: 10px;
 					margin-bottom: 10px;
+				}
+
+				.beige-bg p {
+					padding-bottom: 0;
+					margin-bottom: 0;
 				}
 
 				.subtitle {
@@ -364,28 +420,32 @@
 		<div class="container-fluid">
 			<div class="intro mt-4">
 				<h2 id="typedtext"></h2>
-				<p>
-					Welcome to the captivating world of <em>JFK</em>, a cinematic
-					masterpiece that explores
-					<strong
-						>the enduring mystery behind one of the most pivotal moments in
-						history</strong
-					>. Step into the realm of conspiracy, controversy, and courage as we
-					unravel
-					<strong
-						>the enigma that surrounds the assassination of President John F.
-						Kennedy</strong
-					>.
-				</p>
-				<p>
-					Join us on an unforgettable journey through the tangled web of secrets
-					and
-					<strong
-						>uncover a story that continues to captivate minds, stir emotions,
-						and challenge perceptions</strong
-					>. Get ready to delve into the heart of <em>JFK</em>, where truth
-					meets fiction, and history comes alive.
-				</p>
+				<div id="table">
+					<div id="centeralign">
+						<p>
+							Welcome to the captivating world of <em>JFK</em>, a cinematic
+							masterpiece that explores
+							<strong
+								>the enduring mystery behind one of the most pivotal moments in
+								history</strong
+							>. Step into the realm of conspiracy, controversy, and courage as
+							we unravel
+							<strong
+								>the enigma that surrounds the assassination of President John
+								F. Kennedy</strong
+							>.
+						</p>
+						<p>
+							Join us on an unforgettable journey through the tangled web of
+							secrets and
+							<strong
+								>uncover a story that continues to captivate minds, stir
+								emotions, and challenge perceptions</strong
+							>. Get ready to delve into the heart of <em>JFK</em>, where truth
+							meets fiction, and history comes alive.
+						</p>
+					</div>
+				</div>
 			</div>
 			<div class="hr-container">
 				<hr />
@@ -567,10 +627,9 @@
 						<iframe
 							width="560"
 							height="315"
-							src="https://www.youtube.com/embed/BckPa2_A8gI"
+							src="https://www.youtube.com/embed/BckPa2_A8gI?controls=0"
 							title="YouTube video player"
 							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen
 						></iframe>
 					</div>
@@ -677,19 +736,25 @@
 							<li><strong>Written by</strong> Stephen King</li>
 							<li><strong>Published in</strong> November 8, 2011</li>
 						</ul>
-						<p>
-							On November 22, 1963, three shots rang out in Dallas, President
-							Kennedy died, and the world changed. Unless... In 2011, Jake
-							Epping, an English teacher from Lisbon Falls, Maine, sets out on
-							an insane — and insanely possible — mission to prevent the Kennedy
-							assassination. Leaving behind a world of computers and mobile
-							phones, he goes back to a time of big American cars and diners, of
-							Lindy Hopping, the sound of Elvis, and the taste of root beer. In
-							this haunting world, Jake falls in love with Sadie, a beautiful
-							high school librarian. And, as the ominous date of 11/22/63
-							approaches, he encounters a troubled loner named Lee Harvey
-							Oswald...
-						</p>
+						<div class="textContainer">
+							<div class="overlay"></div>
+							<p>
+								On November 22, 1963, three shots rang out in Dallas, President
+								Kennedy died, and the world changed. Unless... In 2011, Jake
+								Epping, an English teacher from Lisbon Falls, Maine, sets out on
+								an insane — and insanely possible — mission to prevent the
+								Kennedy assassination. Leaving behind a world of computers and
+								mobile phones, he goes back to a time of big American cars and
+								diners, of Lindy Hopping, the sound of Elvis, and the taste of
+								root beer. In this haunting world, Jake falls in love with
+								Sadie, a beautiful high school librarian. And, as the ominous
+								date of 11/22/63 approaches, he encounters a troubled loner
+								named Lee Harvey Oswald...
+							</p>
+						</div>
+						<div class="show-more">
+							<a class="showMoreLink" href="#">Show full text</a>
+						</div>
 						<div class="text-center">
 							<a
 								href="https://www.goodreads.com/book/show/10644930-11-22-63"
@@ -714,20 +779,26 @@
 							<li><strong>Written by</strong> R.J. Ellory</li>
 							<li><strong>Published in</strong> January 1, 2019</li>
 						</ul>
-						<p>
-							On 22<sup>nd</sup> November 1963, John F. Kennedy's presidential
-							motorcade rode through Dealey Plaza. He and his wife Jackie
-							greeted the crowds on a glorious Friday afternoon in Dallas,
-							Texas. Mitch Newman is a photojournalist based out of Washington,
-							D.C. His phone never rings. When it does, a voice he hasn't heard
-							in years will tell him his former fiancée Jean has taken her own
-							life. Jean was an investigative reporter working the case of a
-							lifetime. Somewhere in the shreds of her investigation is the
-							truth behind her murder. For Mitch, piecing together the clues
-							will become a dangerous obsession: one that will lead him to the
-							dark heart of his country - and into the crossfire of a
-							conspiracy...
-						</p>
+						<div class="textContainer">
+							<div class="overlay"></div>
+							<p>
+								On 22<sup>nd</sup> November 1963, John F. Kennedy's presidential
+								motorcade rode through Dealey Plaza. He and his wife Jackie
+								greeted the crowds on a glorious Friday afternoon in Dallas,
+								Texas. Mitch Newman is a photojournalist based out of
+								Washington, D.C. His phone never rings. When it does, a voice he
+								hasn't heard in years will tell him his former fiancée Jean has
+								taken her own life. Jean was an investigative reporter working
+								the case of a lifetime. Somewhere in the shreds of her
+								investigation is the truth behind her murder. For Mitch, piecing
+								together the clues will become a dangerous obsession: one that
+								will lead him to the dark heart of his country - and into the
+								crossfire of a conspiracy...
+							</p>
+						</div>
+						<div class="show-more">
+							<a class="showMoreLink" href="#">Show full text</a>
+						</div>
 						<div class="text-center">
 							<a
 								href="https://www.goodreads.com/book/show/43020547-three-bullets"
@@ -789,5 +860,37 @@
 		}
 
 		typewriter();
+
+		var textContainers = document.getElementsByClassName("textContainer");
+		var showMoreLinks = document.getElementsByClassName("showMoreLink");
+
+		for (var i = 0; i < textContainers.length; i++) {
+			var textContainer = textContainers[i];
+			var showMoreLink = showMoreLinks[i];
+
+			if (textContainer.scrollHeight > textContainer.clientHeight) {
+				showMoreLink.style.display = "inline";
+			}
+
+			showMoreLink.addEventListener(
+				"click",
+				createToggleFunction(textContainer, showMoreLink)
+			);
+		}
+
+		function createToggleFunction(container, link) {
+			return function (e) {
+				e.preventDefault();
+				if (container.classList.contains("expanded")) {
+					container.style.height = "180px";
+					container.classList.remove("expanded");
+					link.innerText = "Show full text";
+				} else {
+					container.style.height = container.scrollHeight + "px";
+					container.classList.add("expanded");
+					link.innerText = "Hide text";
+				}
+			};
+		}
 	</script>
 </html>
