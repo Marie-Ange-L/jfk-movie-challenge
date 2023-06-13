@@ -79,6 +79,32 @@
 				padding-bottom: 15px;
 			}
 
+			a {
+				color: #f8fbf9;
+				text-underline-offset: 2px;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			.white-hover {
+				background-image: linear-gradient(120deg, #f8fbf9 0%, #f8fbf9 100%);
+				background-repeat: no-repeat;
+				background-size: 100% 0.05em;
+				background-position: 0 100%;
+				transition: background-size 0.15s ease-in;
+				&:hover {
+					background-size: 100% 100%;
+					color: #19151f;
+				}
+			}
+
+			strong {
+				font-weight: 600;
+			}
+
 			.hero {
 				overflow: hidden;
 				position: relative;
@@ -151,6 +177,7 @@
 				color: #19151f;
 				font-size: 14px;
 				text-underline-offset: 2px;
+				text-decoration: underline;
 			}
 
 			.beige-bg li a:hover {
@@ -212,6 +239,16 @@
 				color: #f8fbf9;
 				max-width: 600px;
 				padding-top: 15px;
+				line-height: 18px;
+			}
+
+			legend a {
+				color: #f8fbf9;
+				text-decoration: none;
+			}
+
+			legend a:hover {
+				text-decoration: underline;
 			}
 
 			footer {
@@ -228,6 +265,7 @@
 			footer a {
 				color: #f8fbf9;
 				text-underline-offset: 2px;
+				text-decoration: underline;
 			}
 
 			footer a:hover {
@@ -325,19 +363,28 @@
 		</div>
 		<div class="container-fluid">
 			<div class="intro mt-4">
-				<h2>Uncover the Truth. Enter the Intrigue.</h2>
+				<h2 id="typedtext"></h2>
 				<p>
-					Welcome to the captivating world of 'JFK,' a cinematic masterpiece
-					that explores the enduring mystery behind one of the most pivotal
-					moments in history. Step into the realm of conspiracy, controversy,
-					and courage as we unravel the enigma that surrounds the assassination
-					of President John F. Kennedy.
+					Welcome to the captivating world of <em>JFK</em>, a cinematic
+					masterpiece that explores
+					<strong
+						>the enduring mystery behind one of the most pivotal moments in
+						history</strong
+					>. Step into the realm of conspiracy, controversy, and courage as we
+					unravel
+					<strong
+						>the enigma that surrounds the assassination of President John F.
+						Kennedy</strong
+					>.
 				</p>
 				<p>
 					Join us on an unforgettable journey through the tangled web of secrets
-					and uncover a story that continues to captivate minds, stir emotions,
-					and challenge perceptions. Get ready to delve into the heart of 'JFK',
-					where truth meets fiction, and history comes alive.
+					and
+					<strong
+						>uncover a story that continues to captivate minds, stir emotions,
+						and challenge perceptions</strong
+					>. Get ready to delve into the heart of <em>JFK</em>, where truth
+					meets fiction, and history comes alive.
 				</p>
 			</div>
 			<div class="hr-container">
@@ -355,24 +402,30 @@
 					</div>
 					<div class="mb-4 col-lg-5 pr-4">
 						<p>
-							"JFK," a critically acclaimed film directed by the renowned Oliver
-							Stone, takes viewers on a captivating journey into the heart of
-							one of the most controversial events in American history—the
-							assassination of President John F. Kennedy. Released in 1991, this
-							cinematic masterpiece delves deep into the intricate web of
-							theories, suspicions, and unanswered questions that continue to
-							surround this tragic event.
+							<em>JFK</em>, a critically acclaimed film directed by the renowned
+							<strong>Oliver Stone</strong>, takes viewers on a captivating
+							journey into the heart of
+							<strong
+								>one of the most controversial events in American
+								history</strong
+							>
+							— the assassination of President John F. Kennedy.<br />Released in
+							1991, this <strong>cinematic masterpiece</strong> delves deep into
+							the intricate web of theories, suspicions, and unanswered
+							questions that continue to surround this tragic event.
 						</p>
 						<p>
 							Oliver Stone, a filmmaker known for his thought-provoking and
 							politically charged works, skillfully weaves together a compelling
-							narrative that draws inspiration from two influential books: "On
-							the Trail of the Assassins" by Jim Garrison, the real-life New
-							Orleans district attorney, and "Crossfire: The Plot That Killed
-							Kennedy" by Jim Marrs, an investigative journalist. Through
-							meticulous research and a keen eye for detail, Stone brings their
-							words to life on the screen, immersing viewers in a world of
-							intrigue, secrets, and hidden agendas.
+							narrative that draws inspiration from
+							<strong>two influential books</strong>:
+							<em>On the Trail of the Assassins</em> by
+							<strong>Jim Garrison</strong>, the real-life New Orleans district
+							attorney, and <em>Crossfire: The Plot That Killed Kennedy</em> by
+							<strong>Jim Marrs</strong>, an investigative journalist.<br />Through
+							<strong>meticulous research and a keen eye for detail</strong>,
+							Stone brings their words to life on the screen, immersing viewers
+							in a world of intrigue, secrets, and hidden agendas.
 						</p>
 					</div>
 					<div class="mb-4 col-lg-3 beige-bg">
@@ -408,10 +461,19 @@
 				<div class="row">
 					<div class="mb-4 col-lg-4">
 						<p>
-							Step into the intricate world of "JFK," a riveting exploration of
-							the multifaceted tapestry of theories and doubts that envelops the
-							assassination of President John F. Kennedy in Dallas, Texas on
-							November 22, 1963.
+							Step into the intricate world of <em>JFK</em>, a riveting
+							exploration of the multifaceted tapestry of theories and doubts
+							that envelops
+							<strong
+								><a
+									target="_blank"
+									class="white-hover"
+									title="Page on the Assassination of John F. Kennedy on Wikipedia (new tab)"
+									href="https://en.wikipedia.org/wiki/Assassination_of_John_F._Kennedy"
+									>the assassination of President John F. Kennedy</a
+								></strong
+							>
+							in Dallas, Texas on November 22, 1963.
 						</p>
 						<p>
 							Directed by Oliver Stone, this thought-provoking film uncovers a
@@ -425,18 +487,39 @@
 							class="img-fluid mx-auto"
 							alt="Frame of the Zapruder film"
 						/>
+						<legend>
+							Frame 371 showing Jacqueline Kennedy reaching out across the back
+							of the presidential limousine as Secret Service agent Clint Hill
+							climbs aboard. (Source:
+							<a
+								target="_blank"
+								title="The page on the Zapruder film on Wikipedia (new tab)"
+								href="https://en.wikipedia.org/wiki/Zapruder_film#"
+								>Wikipedia</a
+							>)
+						</legend>
 					</div>
 					<div class="mb-4 col-lg-4">
 						<p>
-							Follow the relentless pursuit of truth embodied by Jim Garrison,
-							portrayed by Kevin Costner, a determined New Orleans district
-							attorney who embarks on a mission to unearth the hidden realities
-							surrounding the crime.
+							Follow the <strong>relentless pursuit of truth</strong> embodied
+							by <strong>Jim Garrison</strong>, portrayed by Kevin Costner, a
+							determined <strong>New Orleans district attorney</strong> who
+							embarks on a mission to unearth the hidden realities surrounding
+							the crime.
 						</p>
 						<p>
 							As Garrison's investigation gains momentum, he encounters a
-							diverse array of potential conspirators, casting doubt upon the
-							established version of events endorsed by the Warren Commission.
+							diverse array of potential conspirators, casting
+							<strong
+								>doubt upon the established version of events endorsed by
+								<a
+									class="white-hover"
+									target="_blank"
+									title="Page on the Warren Commission on Wikipedia (new tab)"
+									href="https://en.wikipedia.org/wiki/Warren_Commission"
+									>the Warren Commission</a
+								></strong
+							>.
 						</p>
 					</div>
 				</div>
@@ -446,27 +529,38 @@
 					<div class="col-lg-5">
 						<h2>Cast and Crew</h2>
 						<p>
-							"JFK" boasts an exceptional ensemble cast, led by Kevin Costner in
-							the role of Jim Garrison, the determined district attorney. The
-							film also features stellar performances from Tommy Lee Jones, who
-							portrays Clay Shaw, a businessman accused of conspiracy, and Gary
-							Oldman, who delivers a remarkable portrayal of Lee Harvey Oswald,
-							the man at the center of the assassination. Directed by Oliver
-							Stone, known for his bold and thought-provoking films, "JFK"
-							brings together the talent of these actors and many others to
-							create a gripping cinematic experience.
+							<em>JFK</em> boasts an exceptional ensemble cast, led by
+							<strong>Kevin Costner in the role of Jim Garrison</strong>, the
+							determined district attorney. The film also features
+							<strong
+								>stellar performances from Tommy Lee Jones, who portrays Clay
+								Shaw</strong
+							>, a businessman accused of conspiracy, and
+							<strong
+								>Gary Oldman, who delivers a remarkable portrayal of Lee Harvey
+								Oswald</strong
+							>, the man at the center of the assassination. Directed by Oliver
+							Stone, known for his bold and thought-provoking films,
+							<em>JFK</em> brings together the talent of these actors and many
+							others to create a gripping cinematic experience.
 						</p>
 					</div>
 					<div class="col-lg-5">
 						<h2>Awards and Recognition</h2>
 						<p>
-							"JFK" received widespread acclaim and garnered numerous awards and
-							recognition. The film was nominated for eight Academy Awards,
-							including Best Picture and Best Director, and won two Oscars for
-							Best Cinematography and Best Film Editing. It also received
-							recognition at other prestigious award ceremonies, such as the
-							Golden Globes and the BAFTAs, further solidifying its place as a
-							cinematic masterpiece.
+							<em>JFK</em> received widespread acclaim and garnered numerous
+							awards and recognition. The film was
+							<strong
+								>nominated for eight Academy Awards, including Best Picture and
+								Best Director</strong
+							>, and
+							<strong
+								>won two Oscars for Best Cinematography and Best Film
+								Editing</strong
+							>. It also received recognition at other prestigious award
+							ceremonies, such as
+							<strong>the Golden Globes and the BAFTAs</strong>, further
+							solidifying its place as a cinematic masterpiece.
 						</p>
 					</div>
 					<div class="text-center video-wrapper">
@@ -493,19 +587,25 @@
 				<div class="row justify-content-between">
 					<div class="mb-4 col-lg-4">
 						<p>
-							"JFK" had a profound impact on popular culture and ignited intense
-							discussions about the events surrounding JFK's assassination.
+							<em>JFK</em> had a profound impact on popular culture and ignited
+							intense
+							<strong
+								>discussions about the events surrounding JFK's
+								assassination</strong
+							>.
 						</p>
 						<p>
 							The film challenged the official narrative and prompted viewers to
 							question the existing theories. Its release spurred renewed public
-							interest in the case, leading to further investigations and the
-							eventual passing of the JFK Act of 1992, which aimed to increase
-							transparency regarding the assassination.
+							interest in the case,
+							<strong>leading to further investigations</strong> and the
+							eventual passing of the <strong>JFK Act of 1992</strong>, which
+							aimed to increase transparency regarding the assassination.
 						</p>
 						<p>
-							Even today, "JFK" continues to shape historical interpretations
-							and remains an essential part of the cinematic landscape.
+							Even today, <em>JFK</em> continues to shape historical
+							interpretations and remains an essential part of the cinematic
+							landscape.
 						</p>
 					</div>
 					<div class="mb-4 col-lg-7 beige-bg">
@@ -548,13 +648,13 @@
 					</div>
 				</div>
 			</section>
-
 			<div class="hr-container">
 				<hr />
 			</div>
 			<section>
 				<h2 class="text-center">
-					Delving Deeper: Exploring JFK's Legacy through Pages
+					- <em>Delving Deeper</em> -<br />
+					Exploring JFK's Legacy through Pages
 				</h2>
 				<div class="intro">
 					<p class="text-center">
@@ -655,4 +755,39 @@
 			as part of a Challenge organised by SheCodes in June 2023.
 		</p>
 	</footer>
+	<script>
+		var aText = new Array("Uncover the Truth. Enter the Intrigue.");
+		var iSpeed = 100; // time delay of print out
+		var iIndex = 0; // start printing array at this posision
+		var iArrLength = aText[0].length; // the length of the text array
+		var iScrollAt = 20; // start scrolling up at this many lines
+
+		var iTextPos = 0; // initialise text position
+		var sContents = ""; // initialise contents variable
+		var iRow; // initialise current row
+
+		function typewriter() {
+			sContents = " ";
+			iRow = Math.max(0, iIndex - iScrollAt);
+			var destination = document.getElementById("typedtext");
+
+			while (iRow < iIndex) {
+				sContents += aText[iRow++] + "<br />";
+			}
+			destination.innerHTML =
+				sContents + aText[iIndex].substring(0, iTextPos) + "_";
+			if (iTextPos++ == iArrLength) {
+				iTextPos = 0;
+				iIndex++;
+				if (iIndex != aText.length) {
+					iArrLength = aText[iIndex].length;
+					setTimeout("typewriter()", 500);
+				}
+			} else {
+				setTimeout("typewriter()", iSpeed);
+			}
+		}
+
+		typewriter();
+	</script>
 </html>
