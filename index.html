@@ -417,32 +417,28 @@
 		<div class="container-fluid">
 			<div class="intro mt-4">
 				<h2 id="typedtext"></h2>
-				<div id="table">
-					<div id="centeralign">
-						<p>
-							Welcome to the captivating world of <em>JFK</em>, a cinematic
-							masterpiece that explores
-							<strong
-								>the enduring mystery behind one of the most pivotal moments in
-								history</strong
-							>. Step into the realm of conspiracy, controversy, and courage as
-							we unravel
-							<strong
-								>the enigma that surrounds the assassination of President John
-								F. Kennedy</strong
-							>.
-						</p>
-						<p>
-							Join us on an unforgettable journey through the tangled web of
-							secrets and
-							<strong
-								>uncover a story that continues to captivate minds, stir
-								emotions, and challenge perceptions</strong
-							>. Get ready to delve into the heart of <em>JFK</em>, where truth
-							meets fiction, and history comes alive.
-						</p>
-					</div>
-				</div>
+				<p>
+					Welcome to the captivating world of <em>JFK</em>, a cinematic
+					masterpiece that explores
+					<strong
+						>the enduring mystery behind one of the most pivotal moments in
+						history</strong
+					>. Step into the realm of conspiracy, controversy, and courage as we
+					unravel
+					<strong
+						>the enigma that surrounds the assassination of President John F.
+						Kennedy</strong
+					>.
+				</p>
+				<p>
+					Join us on an unforgettable journey through the tangled web of secrets
+					and
+					<strong
+						>uncover a story that continues to captivate minds, stir emotions,
+						and challenge perceptions</strong
+					>. Get ready to delve into the heart of <em>JFK</em>, where truth
+					meets fiction, and history comes alive.
+				</p>
 			</div>
 			<div class="hr-container">
 				<hr />
@@ -829,7 +825,6 @@
 		var iIndex = 0; // start printing array at this posision
 		var iArrLength = aText[0].length; // the length of the text array
 		var iScrollAt = 20; // start scrolling up at this many lines
-
 		var iTextPos = 0; // initialise text position
 		var sContents = ""; // initialise contents variable
 		var iRow; // initialise current row
@@ -856,7 +851,29 @@
 			}
 		}
 
-		typewriter();
+		// Intersection Observer API - start -
+
+		function startTypewriterWhenVisible(entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					typewriter();
+					observer.unobserve(entry.target);
+				}
+			});
+		}
+
+		var options = {
+			threshold: 0.5,
+		};
+
+		var observer = new IntersectionObserver(
+			startTypewriterWhenVisible,
+			options
+		);
+		var targetElement = document.getElementById("typedtext");
+		observer.observe(targetElement);
+
+		// Intersection Observer API - end -
 
 		var textContainers = document.getElementsByClassName("textContainer");
 		var showMoreLinks = document.getElementsByClassName("showMoreLink");
